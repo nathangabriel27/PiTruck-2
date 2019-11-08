@@ -15,7 +15,7 @@ export default class Login extends Component<Props> {
     this.state = {
       deviceWidth: width,
       deviceHeight: height,
-      email: "nathangabriel27@gmail.com",
+      email: "@gmail.com",
       senha: "semsenha"
     };
   }
