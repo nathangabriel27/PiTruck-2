@@ -23,17 +23,44 @@ export default class Dashboard extends Component<Props> {
         <Image style={styles.iconTruck} source={require('../../assets/icon.png')} />
 
         <TouchableOpacity onPress={() => this.abriProdutos()} style={styles.loginButton} >
-          <Text style={styles.buttonText}>Produtos</Text>
+          <Text style={styles.buttonText}>Meus Produtos</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.loginButton} >
+          <Text style={styles.buttonText}>Locais Favoritos</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.loginButton} >
+          <Text style={styles.buttonText}>Notificações</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.loginButton} >
+          <Text style={styles.buttonText}>Configurações</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.loginButton} >
+          <Text style={styles.buttonText}>EM BREVE</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.loginButton} >
+          <Text style={styles.buttonText}>Ajuda e Suporte </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity  style={styles.loginButton} >
+          <Text style={styles.buttonText}>Sobre</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => this.logout()} style={styles.logoutButton} >
+          <Text style={styles.buttonText}>Logout</Text>
+        </TouchableOpacity>
+
+
 
 
         <TouchableOpacity onPress={() => this.abrirRota()} style={styles.loginButton} >
           <Text style={styles.buttonText}>Abrir tela  de rota</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => this.logout()} style={styles.loginButton} >
-          <Text style={styles.buttonText}>Logout</Text>
-        </TouchableOpacity>
 
 
 
@@ -73,6 +100,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    flexDirection : 'column',
   },
   welcome: {
     fontSize: 20,
@@ -118,6 +146,14 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     backgroundColor: "#23541b",
+    borderRadius: 10,
+    padding: 10,
+    margin: 20,
+    width: width * 0.5,
+    alignItems: 'center'
+  },
+  logoutButton:{
+    backgroundColor: "red",
     borderRadius: 10,
     padding: 10,
     margin: 20,
